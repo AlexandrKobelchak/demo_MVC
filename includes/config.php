@@ -7,5 +7,5 @@ class Config{
     const databaseServer = "localhost";
     const databaseName = "student";
     const databaseUser = "student";
-    const databasePasswd = "gfhjkm";
+    const databasePasswd = "Gf3j2M";
 }
