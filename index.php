@@ -11,13 +11,19 @@ $router = new Router();
 Registry::Set("router", $router);
 
 
+try {
+    Registry::Set("pdo", new PDO("mysql:host=" . Config::databaseServer . "; dbname=" . Config::databaseName,
+        Config::databaseUser, Config::databasePasswd));
+    /*
+    Registry::Get("pdo")->exec("SET NAMES 'utf-8'");
+    Registry::Get("pdo")->exec("SET CHARACTER SET 'utf-8'");
+    */
 
-Registry::Set("pdo", new PDO("mysql:host=".Config::databaseServer."; dbname=".Config::databaseName,
-    Config::databaseUser, Config::databasePasswd));
-/*
-Registry::Get("pdo")->exec("SET NAMES 'utf-8'");
-Registry::Get("pdo")->exec("SET CHARACTER SET 'utf-8'");
-*/
+}
+catch (Exception $ex){
+
+    die($ex->getMessage());
+}
 
 
 
