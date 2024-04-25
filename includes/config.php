@@ -5,7 +5,7 @@ class Config{
     const hostName = "http://www.mvc.local";
 
     const databaseServer = "localhost";
-    const databaseName = "";
-    const databaseUser = "";
-    const databasePasswd = "";
+    const databaseName = "student";
+    const databaseUser = "student";
+    const databasePasswd = "gfhjkm";
 }

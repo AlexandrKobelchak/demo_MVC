@@ -7,12 +7,12 @@ class Registry implements ArrayAccess
 
     #region Singleton
 
-    private static $instance;
+    private static $instance=null;
     private function __construct(){
     }
     public static function getInstance():Registry{
 
-        if(!isset(self::$instance)){
+        if(!isset(self::$instance) || self::$instance==null) {
             self::$instance = new Registry();
         }
 
@@ -27,10 +27,12 @@ class Registry implements ArrayAccess
         return isset ($this->vars[$key]);
     }
 
-    public function offsetGet($key) : mixed
+    public function offsetGet($offset)
     {
-        if($this->offsetExists($key)) {
-            return $this->vars[$key];
+
+        if($this->offsetExists($offset)) {
+
+            return $this->vars[$offset];
         }
         else{
             return null;
@@ -56,9 +58,9 @@ class Registry implements ArrayAccess
 
         self::getInstance()->offsetSet($key, $value);
     }
-    public static function Get($key):mixed{
+    public static function Get($key){
 
-        return self::getInstance()->offsetGet($key);
+        return self::$instance->offsetGet($key);
     }
     public  static function Remove($key):void{
 

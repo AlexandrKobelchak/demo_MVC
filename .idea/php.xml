@@ -10,6 +10,11 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpProjectServersManager">
+    <servers>
+      <server host="mvc.local" id="93126f68-4bf1-41d6-93cf-d11ef8c5543f" name="mvc.local" use_path_mappings="true" />
+    </servers>
+  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
