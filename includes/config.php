@@ -4,8 +4,8 @@ class Config{
 
     const hostName = "http://www.mvc.local";
 
-    const databaseServer = "localhost";
-    const databaseName = "student";
-    const databaseUser = "student";
-    const databasePasswd = "Gf3j2M";
+    const databaseServer = "akobelchak.mysql.database.azure.com";
+    const databaseName = "students";
+    const databaseUser = "Alexandr";
+    const databasePasswd = "35@dmin@.Net";
 }
